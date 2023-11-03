@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById('root')!);
 
 const App: React.FC = () => {
   return <h1>Helloo, React!</h1>;
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
